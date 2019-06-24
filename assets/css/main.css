@@ -5,6 +5,11 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+/* Added by Bram */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Basic */
 @-ms-viewport {
   width: device-width; }
@@ -1780,7 +1785,7 @@ ul.icons {
 
 /* Wrapper */
 .wrapper {
-  padding: 8rem 0 6rem 0 ;
+  padding: 1rem 0 1rem 0 ;
   position: relative;
   z-index: 1; }
   @media screen and (max-width: 1280px) {
@@ -1798,7 +1803,7 @@ ul.icons {
   -ms-flex-align: center;
   -ms-flex-pack: center;
   background-color: #111111;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -1811,7 +1816,7 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url("../../images/banner.jpg");
+  background-image: url("../../images/kripke.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2059,9 +2064,9 @@ ul.icons {
 /* CTA */
 #cta {
   background-color: #ce1b28;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.95);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/cta01.jpg);
+  background-image: linear-gradient(rgba(106, 27, 40, 0.95), rgba(106, 27, 40, 0.95)), url(../../images/cta01.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2392,7 +2397,7 @@ body {
   padding-top: 3.25rem; }
   body:before {
     content: ' ';
-    background-image: url(../../images/bg.jpg);
+    background-image: url(../../images/kripke.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2403,7 +2408,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.05; }
+    opacity: 0.03; }
 
 #header {
   -moz-align-items: center;
@@ -2499,7 +2504,7 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");
+  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/kripke.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

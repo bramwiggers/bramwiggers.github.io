@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Pluralistic Ignorance</title>
+		<title>Bystander Effect</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -17,90 +17,106 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a class="logo" href="index.html">Pluralistic Ignorance</a>
-				<!-- <nav>
+				<a class="logo" href="index.html">Bystander Effect</a>
+				<nav>
 					<a href="#menu">Menu</a>
-				</nav> -->
+				</nav>
 			</header>
 
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="application.html">The application</a></li>
+					<li><a href="paper.html">The Paper</a></li>
+					<li><a href="application.html">The Application</a></li>
 				</ul>
 			</nav>
 
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h1>Pluralistic Ignorance</h1>
-					<p>A Dynamic Epistemic Logic approach to the pluralistic ignorance problem</p>
+					<h1>The Bystander Effect</h1>
+					<p>A Dynamic Epistemic Logic approach to the Bystander Effect problem</p>
 				</div>
 				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
 			</section>
 
-
-			<section class="wrapper">
+			<section id="main" class="wrapper">
 				<div class="inner">
-					<header class="special">
-						<h2>Introduction</h2>
-						<p>We will use Dynamic Epistemic Logic to clarify pluralistic ignorance and see how we can break problems like the bystander effect.  Our research question is therefore:  ”Is it possible to break the problem of pluralistic ignorance by theuse of Dynamic Epistemic Logic?” Several papers have already touched upon this problem, with varying results [5, 6, 7].</p>
-					</header>
-					
 					<div class="content">
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h1>Big Title</h1>
-								<p>Introduction</p>
-								<p>Download the application <a href="code/allcode.java" download="full_system">here</a></p>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h1>Big Title</h1>
-								<p>Introduction</p>
-								<p>Download the application <a href="code/allcode.java" download="full_system">here</a></p>
-							</div>
-						</div>
+						<header>
+							<h2>What is the Bystander Effect?</h2>
+						</header>
+						<p>
+						The Bystander Effect is a situation in which a majority individuals privately disagree with a given norm, but go along with it because they incorrectly believe that the majority agrees. In this project we used Dynamic Epistemic Logic (explained <a href="paper.html">here</a>) to implement a Multi Agent System (can be downloaded <a href="application.html">here</a>) where a bystander effect situation is modelled. The example we will use mainly is that of a corporate boardroom. When strategy is failing, it often happens that board members privately disagree with the current strategy, but go along as they believe that the majority agrees with the norm. Several other examples will be discussed <a href="#examples">below</a>, but first we exaplain how we can arrive at such a situation.
+						</p> 
+						<ol>
+							<li><b>Notice the event.</b> When strategy is failing, it is not always easy to recognize this. When the agent does not recognize the event happening, it can't react to it.</li>
+							<li><b>Interpret the event.</b> The agent has to determine if help is needed. A near bankruptcy is very clear, but most events are more epistemically ambiguous. A decrease in sales may be just a random fluctuation, or the start of the end of a company.</li>
+							<li><b>Determine action.</b> The agent needs to decide whether to take an action. This seems clear, but in groups diffusion of responsibility may arise. In the board room this can be caused by uncertainty of qualities of others or unclear division of tasks.</li>
+						</ol>
+						<p>Pluralistic Ignorance occurs in the second step. When interpreting the situation, it is possible the agent starts looking for <i>Social Proof</i>. This means the agent tries to make conclusions from the actions of other agents. We can see what happens in the picture below. </p>
 
+						<hr />
+
+						<span class="image left"><img src="images/cycle.png" alt="" sizes="30% 30%" /></span>
+						<p>Flowchart of the dynamics leading to the bystander effect. Boxes with solid
+							lines represent epistemic states – boxes with dotted lines indicate events. We can see how agents initially are in a situation where they believe someting is wrong. However, after they misinterpret the actions of others, they use social proof to reevaluate their beliefs. After they have reevaluated their beliefs, all of them go to a state where they do not intervene, because others did not. The flowchart is discussed for the board room case below. From: <i>R. K. Rendsvig, “Pluralistic ignorance in the bystander effect: Informational dynamics of unresponsivewitnesses in situations calling for intervention,”Synthese, vol. 191, no. 11, pp. 2471–2498, 2014.</i></p>
+						
+						<hr />
+
+
+						<h3>An Epistemic timeline of the Bystander Effect</h3>
+						<ol>
+							<li><b>Nothing has happened.</b> The firm is doing fine and no strategy change is needed.</li>
+							<li><b>Epistemically ambiguous event.</b> Something happens and it's not clear whether action is needed. This might be a drop in sales for the firm, but not sure for agents whether a strategy change is needed.</li>
+							<li><b>All believe there is a problem, no-one has information about others' beliefs.</b> The agents think the firm is doing badly and strategy change is needed. They do not know what their colleagues think.</li>
+							<li><b>Choose Action: Intervene Observe or Evade?</b> The agents need to decide whether they want to change the strategy, observe what happens or keep the current strategy.</li>
+							<li><b>All believe that only they observed, others are believed to have evaded.</b> The agents see that their colleagues are not intervening, so they assume they want to keep the strategy intact. They also think they are the only one who observe the others.</li>
+							<li><b>Interpretation of action: What beliefs could others hold that would make them evade?</b> The agents start to think about why the others want to keep the current strategy.</li>
+							<li><b>All believe there is a problem and everyone else believes there is none.</b> The agents think that they are the only one who think the firm is performing poorly.</li>
+							<li><b>Revise beliefs in light of social proof.</b> The agent use social proof to think about their opinion. "If I'm the only one who thinks the firm is doing bad, maybe it's not so bad after all."</li>
+							<li><b>All believe there is no problem.</b> The agents do no longer believe the strategy is bad.</li>
+							<li><b>Choose again: intervene, observe, evade?</b> The agents choose their action again.</li>
+							<li><b>Everybody evades.</b> All agents think that there is no problem because they think everyone thinks this.</li>
+						</ol>
 					</div>
 				</div>
 			</section>
 
-
-
 		<!-- Examples -->
+			<a name="examples"></a>
 			<section class="wrapper">
-				<div class="inner">
+				<div class="inner"> 
 					<header class="special">
-						<h2>Pluralistic Ignorance as a real problem</h2>
-						<p>In this research, we will focus on pluralistic ignorance in Multi-Agent Systems. Pluralistic ignorance occurs when agents privately reject a certain norm, but incorrectly assume that others accept it.</p>
+						<h2>Examples of the Bystander Effect</h2>
 					</header>
 					<div class="highlights">
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-									<h3>The Bystander Effect</h3>
+									<a href="#" class="icon fa-eye"><span class="label">Icon</span></a>
+									<h3>Public Crime</h3>
 								</header>
-								<p>One well known example is the ’Bystander Effect’.  In this case, a crime is happeningon the street and a crowd is able to see the crime and intervene.  However, the crowd can see thecrowd as well, and because people see how others do not react, they are themselves reluctant toreact as well [1].</p>
+								<p>One well known example of the Bystander Effect happens in public.  In this case, a crime is happeningon the street and a crowd is able to see the crime and intervene.  However, the crowd can see thecrowd as well, and because people see how others do not react, they are themselves reluctant toreact as well [2].</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<a href="#" class="icon fa-cloud"><span class="label">Icon</span></a>
 									<h3>Climate Change</h3>
 								</header>
-								<p>Another example is climate change.  In this case, it is also true that everyone isresponsible and everyone knows that everyone is responsible.  Next to this, everyone can see thatothers are not reacting, and therefore can assume that others are accepting the norm of polluting [2].</p>
+								<p>Another example is climate change.  In this case, it is also true that everyone isresponsible and everyone knows that everyone is responsible.  Next to this, everyone can see that others are not reacting, and therefore can assume that others are accepting the norm of polluting [5].</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<a href="#" class="icon fa-glass"><span class="label">Icon</span></a>
 									<h3>Alcohol Consumption</h3>
 								</header>
-								<p>Pluralistic ignorance is also found in alcohol consumption on campus.  Many students assumethey are more uncomfortable with alcohol practices than the average student.  Students even feltalienated from the campus, although this perceived deviance to peers was illusionary [3].</p>
+								<p>The bystander effect is also found in alcohol consumption on campus.  Many students assume they are more uncomfortable with alcohol practices than the average student.  Students even felt alienated from the campus, although this perceived deviance to peers was illusionary [6].</p>
 							</div>
 						</section>
 						<section>
@@ -109,45 +125,43 @@
 									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
 									<h3>Strategy decisions</h3>
 								</header>
-								<p>The problem occurs as well in board rooms.  When a certain direction is not feasible anymore, companiesoften continue in the same path whereas they privately know this is not the right direction.  Oneexplanation  for  this  is  pluralistic  ignorance [4].</p>
+								<p>The problem occurs as well in board rooms.  When a certain direction is not feasible anymore, companies often continue in the same path whereas they privately know this is not the right direction.  One explanation  for  this  is  pluralistic  ignorance [8].</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-									<h3>Example</h3>
+									<a href="#" class="icon fa-truck"><span class="label">Icon</span></a>
+									<h3>Abilene Paradox</h3>
 								</header>
-								<p>...</p>
+								<p>Jerry B. Harvey was enjoying a hot afternoon with his family in Coleman, Texas, when his father in-law suggests to have dinner in Abilene, 85 km away. Everyone agrees and Jerry, not wanting to spoil the fun, agrees as well. The drive is hot and long, and the food even worse. When the group returns, one of them sarcastically states how 'wonderful' the trip was. At this moment everyone agrees that they did not want to go. The group is perplexed. Everyone agreed to go on a trip which no one wanted to join.[3] </p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-									<h3>Example</h3>
+									<a href="#" class="icon fa-chain-broken"><span class="label">Icon</span></a>
+									<h3>Racial Segregation</h3>
 								</header>
-								<p>...</p>
+								<p> One problem which had a big impact on the history of the United States is the segregation of whites and blacks. O’Gorman [7] found that many whites overestimated the support of other whites for racial segregation, but themselves being not in favor. Data shows that in East North Central America the amount of people in favor was 14% whereas the same people believed that 48% of the other people was in favor of segregation.</p>
 							</div>
 						</section>
 					</div>
 				</div>
 			</section>
 
-		<!-- CTA -->
 			<section id="cta" class="wrapper">
 				<div class="inner">
-					<h2>Dynamic Epistemic Logic</h2>
-					<p></p>
+					<h2>Friendship ties</h2>
+					<p>Westphal et. al. ([8]) proposes dense friendship ties to moderate the effect of pluralistic ignorance as it increases the propensity for directors to speak up.  One of the reasons for pluralistic ignorance given by Westphal et. al. is the loss of face when speaking up against the norm.  Because friends will not condemn you for a different opinion the possibility to speak up is bigger. Another reason for pluralistic ignorance is the inability to judge the average belief of a group. Because friends see each other more often in informal settings, it is possible to speak more freely and discuss private concerns.  When people are able to discuss their own concerns, they might discover that  others  share  their  opinion  and  discuss  their  concerns  with  the  whole group </p>
 				</div>
 			</section>
 
+
 			<section class="wrapper">
-				<div class="inner">
-					<h2>Further Steps</h2>
-					<p>In further steps we see a lot of possibility to test moderation in pluralistic ignorance.  As suggested by [4], dense friendship ties and demographic homogeneity can moderate the effect of pluralistic ignorance as it increases the propensity for directots to speak up.  A formal definition of friendship ties and homogeneous demography can be given and the results can be found in the model, as this relates to real world data.</p>
-				</div>
+				
 			</section>
+
 
 
 					<!-- Footer -->
@@ -156,13 +170,20 @@
 					<div class="content">
 						<section>
 							<h3>References</h3>
-							<p>[1] D.  A.  Prentice  and  D.  T.  Miller,  “Pluralistic  ignorance  and  the  perpetuation  of  social  norms  byunwitting actors,” inAdvances in experimental social psychology, vol. 28, pp. 161–209, Elsevier, 1996.<br />
-							[2]  N. Geiger and J. K. Swim, “Climate of silence:  Pluralistic ignorance as a barrier to climate changediscussion,”Journal of Environmental Psychology, vol. 47, pp. 79–90, 2016.<br />
-							[3]  D. A. Prentice and D. T. Miller, “Pluralistic ignorance and alcohol use on campus:  some consequencesof misperceiving the social norm.,”Journal of personality and social psychology, vol. 64, no. 2, p. 243,1993.<br />
-							[4]  J.  D.  Westphal  and  M.  K.  Bednar,  “Pluralistic  ignorance  in  corporate  boards  and  firms’  strategicpersistence  in  response  to  low  firm  performance,”Administrative Science Quarterly,  vol.  50,  no.  2,pp. 262–298, 2005.<br />
-							[5]  E. Pacuit, R. Parikh, and E. Cogan, “The logic of knowledge based obligation,”Synthese, vol. 149,no. 2, pp. 311–341, 2006.<br />
-							[6]  R. K. Rendsvig, “Pluralistic ignorance in the bystander effect: Informational dynamics of unresponsivewitnesses in situations calling for intervention,”Synthese, vol. 191, no. 11, pp. 2471–2498, 2014.<br />
-							[7]  Z. Christoff and J. U. Hansen,  “A logic for diffusion in social networks,”Journal of Applied Logic,vol. 13, no. 1, pp. 48–77, 2015 <br />
+							<p>
+								[1]  U.S.D.ofTransportation:NationalHighwayTrafficSafetyAdministration,“https://www.nhtsa.gov/,” accessed:1-6-2019:. <br />
+								[2]  B. Latane and J. M. Darley,The unresponsive bystander: Why doesn’t he help? Appleton-Century-Crofts, 1970. <br />
+								[3]  J. B. Harvey, “The abilene paradox: the management of agreement.,”Organizational Dynamics, 1974. <br />
+								[4]  D.  A.  Prentice  and  D.  T.  Miller,  “Pluralistic  ignorance  and  the  perpetuation  of  social  norms  by unwitting actors,” in Advances in experimental social psychology, vol. 28, pp. 161–209, Elsevier, 1996.<br />
+								[5]  N. Geiger and J. K. Swim, “Climate of silence:  Pluralistic ignorance as a barrier to climate change discussion,”Journal of Environmental Psychology, vol. 47, pp. 79–90, 2016.<br />
+								[6]  D. A. Prentice and D. T. Miller, “Pluralistic ignorance and alcohol use on campus: some consequences of misperceiving the social norm.,”Journal of personality and social psychology, vol. 64, no. 2, p. 243,1993.<br />
+								[7]  H. J. O’GORMAN, “Pluralistic ignorance and white estimates of white support for racial segregation,”Public Opinion Quarterly, vol. 39, no. 3, pp. 313–330, 1975.<br />
+								[8]  J. D. Westphal and M. K. Bednar,  “Pluralistic ignorance in corporate boards and firms’ strategic persistence in response to low firm performance,”Administrative Science Quarterly, vol. 50, no. 2,pp. 262–298, 2005.<br />
+								[9]  R. K. Rendsvig, “Pluralistic ignorance in the bystander effect:  Informational dynamics of unresponsive witnesses in situations calling for intervention,”Synthese, vol. 191, no. 11, pp. 2471–2498, 2014.19<br />
+								[10]  R. Hammack, W. Imrich, and S. Klavzar, Handbook of product graphs.  CRC press, 2011.<br />
+								[11]  G. Katzenstein, “The debate on structured debate: Toward a unified theory,”Organizational Behaviorand Human Decision Processes, vol. 66, no. 3, pp. 316–332, 1996.<br />
+								[12]  B. Gavish and J. H. Gerdes Jr, “Anonymous mechanisms in group decision support systems commu-nication,”Decision Support Systems, vol. 23, no. 4, pp. 297–328, 1998.<br />
+								[13]  B. Latane and S. Nida,  “Ten years of research on group size and helping.,”Psychological bulletin,vol. 89, no. 2, p. 308, 1981.<br />
 							</p>
 
 
